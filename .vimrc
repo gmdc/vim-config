@@ -17,14 +17,13 @@ set runtimepath=~/.vim,$VIM/vimfiles,$VIMRUNTIME,$VIM/vimfiles/after,~/.vim/afte
 call vundle#rc()
 
 " My Bundles here:
-"
-" original repos on github
+
 " Powerline
 Bundle 'Lokaltog/vim-powerline'
 
-" vim-scripts repos
-" Bundle 'L9'
-" Bundle 'FuzzyFinder'
+" Python mode (indentation, doc, refactor, lints, code checking, motion and
+" operators, highlighting, run and ipdb breakpoints)
+Bundle 'klen/python-mode'
 
 " Terminal Vim with 256 colors colorscheme
 Bundle 'nanotech/jellybeans.vim'
@@ -32,7 +31,6 @@ Bundle 'nanotech/jellybeans.vim'
 " Gvim colorscheme
 Bundle 'Wombat'
 
-" non github repos
 " Bundle 'git://git.wincent.com/command-t.git'
 
 
