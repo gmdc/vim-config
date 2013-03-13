@@ -50,7 +50,7 @@ Bundle 'kien/ctrlp.vim'
 Bundle 'Wombat'
 
 " Tab list panel
-"Bundle 'kien/tabman.vim'
+Bundle 'kien/tabman.vim'
 
 " CTags browser
 Bundle 'majutsushi/tagbar'
@@ -152,10 +152,10 @@ imap <C-Up> <ESC><c-w>k
 imap <C-Down> <ESC><c-w>j
 
 " Tab Navigation
-"map tn :tabn<CR>
-"map tp :tabp<CR>
-"map tm :tabm 
-"map tt :tabnew 
+map tn :tabn<CR>
+map tp :tabp<CR>
+map tm :tabm 
+map tt :tabnew 
 "map <C-S-Right> :tabn<CR>
 "imap <C-S-Right> <ESC>:tabn<CR>
 "map <C-S-Left> :tabp<CR>
@@ -165,9 +165,9 @@ imap <C-Down> <ESC><c-w>j
 " TabMan
 "
 " :TMToggle
-"let g:tabman_toggle = 'tl'
+let g:tabman_toggle = 'tl'
 " :TMFocus to give focus to/open the TabMan window.
-"let g:tabman_focus  = 'tf'
+let g:tabman_focus  = 'tf'
 
 "
 " MiniBufExpl
