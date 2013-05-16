@@ -47,7 +47,7 @@ Bundle 'kien/ctrlp.vim'
 Bundle 'Wombat'
 
 " Tab list panel
-Bundle 'kien/tabman.vim'
+"Bundle 'kien/tabman.vim'
 
 " CTags browser
 Bundle 'majutsushi/tagbar'
@@ -103,7 +103,8 @@ set guifont=Inconsolata\ Medium\ 12
 
 winpos 50 50
 set number
-" Managing from WM now.
+
+" Managing from Openbox now.
 "if has("gui_running")
   " GUI is running or is about to start.
   " Maximize gvim window.
@@ -180,40 +181,50 @@ map tt :tabnew
 " TabMan
 "
 " :TMToggle
-let g:tabman_toggle = 'tl'
+"let g:tabman_toggle = 'tl'
 " :TMFocus to give focus to/open the TabMan window.
-let g:tabman_focus  = 'tf'
+"let g:tabman_focus  = 'tf'
 
 "
 " MiniBufExpl
 "
 
 " Open and/or goto Explorer
-"map <leader>bb :MiniBufExplorer<CR>
+map <leader>bb :MiniBufExplorer<CR>
 
-" Automatic open after more than one elegible Buffer
-"let g:miniBufExplorerMoreThanOne=0
+" Close MBE Window
+map <leader>bc :CMiniBufExplorer<CR>
 
-" open new buffer below or right
-"let g:miniBufExplSplitBelow=1
+" Force Update MBE Window
+map <leader>bu :UMiniBufExplorer<CR>
 
-" Vertical Buffer List
-"let g:miniBufExplSplitToEdge = 0
+" Always visible
+let g:miniBufExplorerMoreThanOne=1
+
+" Vertical and Right Window 
+let g:miniBufExplSplitToEdge = 0 
+let g:miniBufExplSplitBelow=1
 
 " Vertical List Char Width
-"let g:miniBufExplVSplit = 20   " column width in chars
+let g:miniBufExplVSplit = 20   " column width in chars
 
-"let g:miniBufExplMaxSize = 30 
+let g:miniBufExplMaxSize = 30 
 
-"enable <C-TAB> and <C-S-TAB> to a function that
-"will bring up the next or previous buffer in the current window
+" Enable <C-TAB> and <C-S-TAB> to a function that
+" will bring up the next or previous buffer in the current window
 let g:miniBufExplMapCTabSwitchBufs = 1
 
-"If you use other explorers like TagList you can (As of 6.2.8) put:
+" If you use other explorers like TagList you can (As of 6.2.8) put:
 let g:miniBufExplModSelTarget = 1
 
+" There is a VIM bug that can cause buffers to show up without
+" their highlighting. The following setting will cause MBE to
+" try and turn highlighting back on
+let g:miniBufExplForceSyntaxEnable = 1
+
 " Automatic Close After Buffer Selection
-"let g:miniBufExplCloseOnSelect = 1
+let g:miniBufExplCloseOnSelect = 0
+
 "
 " Tagbar
 "
@@ -251,7 +262,7 @@ nmap <leader>G :CtrlPBufTagAll<CR>
 nmap <leader>f :CtrlPLine<CR>
 
 " fuzzy buffer finder
-nmap <leader>bf :CtrlPBuffer<CR>
+nmap <leader>be :CtrlPBuffer<CR>
 
 " to be able to call CtrlP with default search text
 function! CtrlPWithSearchText(search_text, ctrlp_command_end)
