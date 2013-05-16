@@ -77,6 +77,9 @@ Bundle 'vim-scripts/perl.vim'
 Bundle 'c9s/perlomni.vim'
 
 
+" ** Matlab plugins
+Bundle 'vim-scripts/MatlabFilesEdition'
+
 
 " allow plugins by file type
 filetype on
